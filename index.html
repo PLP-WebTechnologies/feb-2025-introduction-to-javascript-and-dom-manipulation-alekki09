@@ -1,0 +1,105 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Webpage</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav {
+  background: #444;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  flex: 1;
+}
+
+main {
+  background: #f4f4f4;
+  padding: 1rem;
+}
+
+aside {
+  background: #e4e4e4;
+  padding: 1rem;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+#dynamicText {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+  </style>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Responsive Webpage</h1>
+  </header>
+  <nav>
+    <div>Home</div>
+    <div>About</div>
+    <div>Services</div>
+    <div>Contact</div>
+  </nav>
+  <div class="container">
+    <main>
+      <h2>Main Content</h2>
+      <p>This is the main content area. Resize the browser to see the responsive behavior.</p>
+      <div id="dynamicText">This text will change.</div>
+      <button id="changeTextBtn">Change Text</button>
+      <button id="toggleElementBtn">Toggle Element</button>
+    </main>
+    <aside>
+      <h3>Sidebar</h3>
+      <p>This is the sidebar content.</p>
+    </aside>
+  </div>
+  <footer>
+    <p>Footer Information</p>
+  </footer>
+</body>
+</html
